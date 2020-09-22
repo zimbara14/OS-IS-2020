@@ -1,0 +1,63 @@
+-- INSTRUCTIONS --
+This program is made for people. They can use it by entering a few arguments with specific identificators. The program lays in the file named text1.sh.
+
+Second argument ($1) can be:
+- calc
+	the function for calculator; the third argument can be:
+		- sum,
+		- sub,
+		- mul,
+		- div;
+	the third and fourth arguments are numbers
+
+	example input: ./text1.sh calc sum 4 5
+	expected output: 9
+
+- search
+	this does something!
+
+- reverse 
+	this function prints reversed content from one file into another; the third and fourth			arguments are the names of the files
+
+	text1.txt:
+	hello
+	world
+	!
+	
+	example input: ./text1.sh reverse text1.txt text2.txt
+	expected output:
+	!
+	world
+	hello
+
+- strlen
+	the function prints just the length of a string, which was passed as a third argument
+	
+	example input: ./text1.sh strlen Hello
+	expected output: 5
+
+- log
+	this does something!
+
+- exit
+	this exists the script with a code (third argument)
+	
+	example input: ./text1.sh exit 5
+	expected output: -
+
+-help
+	this is a current function
+
+	example input: ./text1.sh help
+	expected output: this .txt file
+
+-interactive
+	as the name says, in this mode, you can play; there are the same functions listed here, but 		with a special coloful menu ^_^
+
+	example input: ./text1.sh interactive
+	expected output: a special menu with listed functions
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+P.S. Example input is as it would be input from a command line.
+P.P.S. Hope this helped!
+________________________________________________________________________________________________________________________________________________________________________________________________________

@@ -6,5 +6,8 @@ if [[ ! -f $ffile ]]; then
 	exit 1
 fi
 
-#	cat $ffile | sed 's/WW/\033[33mWarning:\e[0m/g'
-#	cat $ffile | sed 's/II/\033[34mInformation:\e[0m/g'
+warning=$(cat $ffile | awk '/\[/ && /WW/') &>/dev/null
+information=$(cat $ffile | awk '/\[/ && /II/') &>/dev/null
+
+echo -e "${warning//"(WW)"/"\e[33mWarning:\e[0m"}"
+echo -e "${information//"(II)"/"\e[34mInformation:\e[0m"}"

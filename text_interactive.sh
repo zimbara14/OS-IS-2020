@@ -29,7 +29,8 @@ case "$inp" in
 	;;
 	
 	log | d)
-	echo "We need to do stuff!"
+	var7=&(./text_log.sh)
+	. ./text_interactive.sh
 	;;
 	
 	exit | e)
@@ -58,7 +59,9 @@ case "$inp" in
 	;;
 
 	search | g)
-	echo "Search"
+	echo "Enter directory and a regular expression"
+	read diir reeg
+	var9=&(./text_search.sh " "$diir" "$reeg")
 	;;
 	*)
 	echo "Invalid option. Try again."

@@ -5,8 +5,7 @@ case "$1" in
 	. ./text_calc.sh
 	;;
 	search)
-	grep -ri "$3" "$2"
-	echo "We are doing some stuff!!"
+	. ./text_search.sh
 	;;
 	reverse)
 	. ./text_reverse.sh

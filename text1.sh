@@ -15,7 +15,7 @@ case "$1" in
 	. ./text_string.sh
 	;;
 	log)
-	echo "this is log!"
+	. ./text_log.sh
 	;;
 	exit)
 	if [[ ! "$2" =~ ^[+-]?[0-9]+$ ]]; then

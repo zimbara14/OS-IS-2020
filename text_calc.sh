@@ -13,22 +13,14 @@ if [[ -z $second ]] 2>/dev/null; then
 	exit 1
 fi
 
-if [[ ! "$first" =~ ^[\+|-]?[0-9]+$ ]]; then
+if [[ ! $first =~ ^[+-]?[0-9]+?$ ]]; then
 	echo "Try again! The first argument is not an integer."
-	exit 2>/dev/null
+	exit 1 #| 2>/dev/null
 fi
 
-if [[ ! "$second" =~ ^[+-]?[0-9]+$ ]]; then
+if [[ ! $second =~ ^[+-]?[0-9]+?$ ]]; then
 	echo "Try again! The second argument is not an integer."
-	exit | 2>/dev/null
-fi
-
-if [[ "$first" = "+0" || "$first" = "-0" ]]; then
-	$first = 0 | 2>/dev/null
-fi
-
-if [[ "$second" = "+0" || "$second" = "+0" ]]; then
-	$second = 0 | 2>/dev/null
+	exit 1
 fi
 
 case "$2" in
@@ -45,11 +37,7 @@ case "$2" in
 		echo "$mul"
 		;;
 	div)
-	#	if [ $4 -eq 0 ]
-	#	then
-	#	echo "Can't divide by 0! Try all over again!"
-	#	fi
-		if [ "$second" == "0" ]; then
+		if [[ $second =~ ^[+-]?[0]+([.][0])?$ ]]; then
 			echo "Can't divide by 0!"
 			exit 1
 		else
@@ -58,7 +46,7 @@ case "$2" in
 		fi
 		;;
 	*)
-		echo "Wrong input! Try sum/sub/mul/div"
+		echo "Wrong input! Try sum/sub/mul/div."
 		;;
 esac
 exit 0

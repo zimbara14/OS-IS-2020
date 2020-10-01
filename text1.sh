@@ -17,16 +17,7 @@ case "$1" in
 	. ./text_log.sh
 	;;
 	exit)
-	if [[ ! "$2" =~ ^[+-]?[0-9]+$ ]]; then
-		exit 1
-	fi
-
-	if [ -z "$2" ] 
-	then
-		exit 0
-	else
-		exit  "$2"
-	fi
+	. ./text_exit.sh
 	;;
 	help)
 	echo "$(<help.txt)"

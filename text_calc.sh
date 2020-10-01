@@ -3,6 +3,11 @@
 first=$3
 second=$4
 
+if [[ $# > 4 ]]; then
+	echo "More than 2 arguments! Try again..."
+	exit 1
+fi
+
 if [[ -z $first ]] 2>/dev/null; then
 	echo "Enter two integers!"
 	exit 1

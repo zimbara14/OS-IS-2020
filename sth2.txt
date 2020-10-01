@@ -1,10 +1,5 @@
 
-the power of bash functions, ladies and gentlemen.
+hi
+that's me
 
-so this is supposed to be line four, but it really will be one of the first ones in sth2.txt :)
-
-and i want for my output to be printed backwards! :D
-
-my name is a random file!
-
-hello!
+hello

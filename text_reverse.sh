@@ -3,6 +3,11 @@
 #text1=$2
 #text2=$3
 
+if  [[ ! -z $2 ]] || [[ ! -z $3 ]]; then
+	echo "Error! Insufficent arguments provided."
+	exit 1
+fi
+
 if ! [[ -e $2 ]]; then
 	echo "File does not exist! Terminating..."
 	exit 1

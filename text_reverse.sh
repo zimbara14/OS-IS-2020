@@ -16,7 +16,7 @@ fi
 if [[ "$3" == "$2" ]]; then
 	echo "Self-reverse activated."
 	var=$(tac $2)
-	echo $var > $2
+	echo $var > $2 | 2>/dev/null
 	exit 0
 else
 	tac $2 > $3 | 2>/dev/null

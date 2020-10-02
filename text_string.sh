@@ -1,8 +1,12 @@
 #!/bin/bash
 mystring=$2
-var=$(printf '%s' $mystring)
-echo ${#var}
+if [[ -z $mystring ]]; then
+	echo "Error! Input some string..."
+	exit 1
+fi
 
-#echo ${#mystring}
+echo "${#mystring}"
+
+#var=$(printf '%s' $mystring) and echo ${#mystring}
 
 exit 0;

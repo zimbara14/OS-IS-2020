@@ -7,11 +7,11 @@ case "$inp" in
 	calc|a)
 	echo "Enter sum/sub/mul/div and two ints in one line!"
 	read var n1 n2
-	var2 = &(./text_calc.sh " " "$var" "$n1" "$n2")
-	echo $var2
+	echo &(./text_calc.sh " " "$var" "$n1" "$n2")
 	. ./text_interactive.sh
 	;;
-
+	
+#permission denied reverse, its a dir; exit x - nan; calc messages; strlen "" var interactive...in reverse check if its a directory, if there is a possibility to write in a file and yeahh
 	reverse|b)
 	echo "Enter the two name files"
 	read var3 var4
@@ -37,23 +37,6 @@ case "$inp" in
 	echo "Would you like to input exit code? If not, just hit the enter button"
 	read varr
 	. ./text_exit.sh " " "$varr"
-	#varia = $?
-	#exit $varia
-	#if [[ -z $varr ]]; then
-	#	echo "Just exiting..."
-	#	exit 0
-	#	fi
-
-	#if [[ ! $varr =~ ^[\+|-]?[0-9]+$ ]]; then
-	#	echo "Exiting..."
-	#	exit 1
-	#if [[ $var -ge 0 && $var -le 255 ]]; then
-	#	echo "Exiting with a code... $varr"
-	#	exit "$varr"
-	#else 
-	#	echo "Exiting..."
-	#	exit1
-	#fi
 	;;
 
 	help|f)

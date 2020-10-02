@@ -8,9 +8,10 @@ if ! [[ -e $2 ]]; then
 	exit 1
 fi
 
-if ! [[ -e $3 ]]; then
+if [[ "$3" == "$2" ]]; then
 	echo "Self-reverse activated."
-	tac $2 | rev > $2
+	var=$(tac $2)
+	echo $var > $2
 	exit 0
 else
 	tac $2 > $3 | 2>/dev/null

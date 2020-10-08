@@ -1,12 +1,12 @@
 #!/bin/bash
 
 if [[ -z $2 ]] || [[ -z $3 ]]; then
-	echo "Insufficient arguments provided!"
+	echo "Error: insufficient arguments provided!"
 	exit 1
 fi 
 
 if ! [[ -e $2 ]] || ! [[ -d $2 ]]; then
-	echo "No such directory."
+	echo "Error: no such file or directory!"
 	exit 1
 fi
 

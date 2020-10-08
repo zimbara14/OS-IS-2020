@@ -1,12 +1,11 @@
 #!/bin/bash
 mystring=$2
-if [[ -z $mystring ]]; then
-	echo "Error! Input some string..."
-	exit 1
+
+if [[ $# -gt 2 ]]; then
+	echo "Error! Enter only one string."
+	exit 2
 fi
 
-echo "${#mystring}"
+echo ${#mystring}
 
-#var=$(printf '%s' $mystring) and echo ${#mystring}
-
-exit 0;
+exit 0

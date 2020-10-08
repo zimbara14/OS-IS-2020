@@ -11,7 +11,8 @@ case "$inp" in
 	. ./text_interactive.sh
 	;;
 	
-#permission denied reverse, its a dir; exit x - nan; calc messages; strlen "" var interactive...in reverse check if its a directory, if there is a possibility to write in a file and yeahh
+#permission denied reverse, its a dir; exit x - nan;  var interactive...in reverse check if its a directory, if there is a possibility to write in a file and yeahh
+
 	reverse|b)
 	echo "Enter the two name files"
 	read var3 var4
@@ -22,9 +23,7 @@ case "$inp" in
 	strlen|c)
 	echo "Enter a string:"
 	read str
-	var6 = &(./text_string.sh " " "$str")
-	echo "The length of your string is... $var6"
-	echo " "
+	echo &(./text_string.sh " " "$str")
 	. ./text_interactive.sh
 	;;
 	
@@ -36,6 +35,9 @@ case "$inp" in
 	exit|e)
 	echo "Would you like to input exit code? If not, just hit the enter button"
 	read varr
+	if [[ -z "$varr" ]]; then
+		exit 0
+	fi
 	. ./text_exit.sh " " "$varr"
 	;;
 

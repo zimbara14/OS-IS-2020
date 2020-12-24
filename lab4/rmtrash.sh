@@ -8,12 +8,6 @@ then
 	exit 1
 fi
 
-if [ $# > 1 ]
-then
-	echo "error: entered more than one arg"
-	exit 1
-fi
-
 if [ ! -f "$1" ]
 then
 	echo "error: ./rmtrash : file $1 does not exist"

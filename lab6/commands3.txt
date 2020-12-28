@@ -1,0 +1,6 @@
+3.1
+	sc query type=service > services_
+	:: or 
+	:: net start > services_
+3.2
+	third.cmd

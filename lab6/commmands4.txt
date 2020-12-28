@@ -1,0 +1,5 @@
+@echo off
+4.1
+	driversquery > drivers_
+4.2
+	sort /r drivers_ > drivers_sorted_

@@ -1,0 +1,13 @@
+1.1
+	mkdir LAB6
+
+	wmic os get version > wmic_os_get_version
+	wmic os get FreePhysicalMemory > wmic_os_get_freephysicalmemory
+	wmic diskdrive get model,serialNumber,size,mediaType,partitions > wmic_diskdrive_get_model_serialNumber_size_mediaType_partitions
+1.2
+	mkdir TEST
+	xcopy c:\LAB6
+1.3
+	type * > all_commands
+1.
+	for %i in (*) do if not "%~i" == all_commands del "%~i

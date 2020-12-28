@@ -1,0 +1,12 @@
+2.1
+	hostname
+	:: == DESKTOP-AOUAQH2
+	net use q: \\DESKTOP-AOUAQH2\temp
+2.2
+	second.cmd
+2.3
+	schtasks /create /sc once /tn "task" /tr c:\lab6\second.cmd /st 17:07
+2.4
+	taskkill /im xcopy.exe /f
+2.5
+	fc c:\windows\new\temp.pdf q:\temp.pdf

@@ -1,0 +1,19 @@
+Comparing files services_ and SERVICES2_
+***** services_
+   Microsoft Office Click-to-Run Service
+   Microsoft Passport
+   Microsoft Passport Container
+***** SERVICES2_
+   Microsoft Office Click-to-Run Service
+   Microsoft Passport Container
+*****
+
+***** services_
+   Windows Biometric Service
+   Windows Camera Frame Server
+   Windows Connection Manager
+***** SERVICES2_
+   Windows Biometric Service
+   Windows Connection Manager
+*****
+
